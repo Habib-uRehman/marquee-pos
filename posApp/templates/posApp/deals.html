@@ -1,0 +1,603 @@
+{% extends "posApp/base.html" %} {% load humanize %} {% block pageContent %}
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="weather-card rain">
+				<div class="top">
+					<div class="wrapper">
+						<div class="mynav">
+							<a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+							<a href="javascript:"><span class="lnr lnr-cog"></span></a>
+						</div>
+						<h1 class="heading"> </h1>
+						<h3 class="location">Menu</h3>
+						<p class="temp">
+							<span class="temp-value">Deal,</span>
+							<span class="deg"></span>
+							<a href="javascript:"><span class="temp-type">1</span></a>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+						<ul class="forecast">
+							<a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+							<li class="active">
+								<a href="#" onclick="showImage('../../../static/posAPP/assets/img/steve.png')"> <span class="date">Main Course</span></a>
+                                <div id="myModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img01">
+                              </div>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+							</li>
+							<li>
+								<a href="#" onclick="showImage('../../../static/posAPP/assets/img/starter.png')"> <span class="date">Starter</span> </a>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="col">
+			<div class="weather-card one">
+				<div class="top">
+					<div class="wrapper">
+						<div class="mynav">
+							<a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+							<a href="javascript:"><span class="lnr lnr-cog"></span></a>
+						</div>
+						<h1 class="heading"> </h1>
+						<h3 class="location">Menu</h3>
+						<p class="temp">
+							<span class="temp-value">Deal,</span>
+							<span class="deg"></span>
+							<a href="javascript:"><span class="temp-type">2</span></a>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+						<ul class="forecast">
+							<a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+							<li class="active">
+								<span class="date">Main Course</span>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+							</li>
+							<li>
+								<span class="date">Starter</span>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="col">
+			<div class="weather-card rain">
+				<div class="top">
+					<div class="wrapper">
+						<div class="mynav">
+							<a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+							<a href="javascript:"><span class="lnr lnr-cog"></span></a>
+						</div>
+						<h1 class="heading"> </h1>
+						<h3 class="location">Menu</h3>
+						<p class="temp">
+							<span class="temp-value">Deal,</span>
+							<span class="deg"></span>
+							<a href="javascript:"><span class="temp-type">3</span></a>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+						<ul class="forecast">
+							<a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+							<li class="active">
+								<span class="date">Main Course</span>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+							</li>
+							<li>
+								<span class="date">Starter</span>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="col">
+			<div class="weather-card one">
+				<div class="top">
+					<div class="wrapper">
+						<div class="mynav">
+							<a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+							<a href="javascript:"><span class="lnr lnr-cog"></span></a>
+						</div>
+						<h1 class="heading"> </h1>
+						<h3 class="location">Menu</h3>
+						<p class="temp">
+							<span class="temp-value">Deal,</span>
+							<span class="deg"></span>
+							<a href="javascript:"><span class="temp-type">4</span></a>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+						<ul class="forecast">
+							<a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+							<li class="active">
+								<span class="date">Main Course</span>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+							</li>
+							<li>
+								<span class="date">Starter</span>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+    <div class="row">
+		<div class="col">
+			<div class="weather-card rain">
+				<div class="top">
+					<div class="wrapper">
+						<div class="mynav">
+							<a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+							<a href="javascript:"><span class="lnr lnr-cog"></span></a>
+						</div>
+						<h1 class="heading"></h1>
+						<h3 class="location">Menu</h3>
+						<p class="temp">
+							<span class="temp-value">Deal,</span>
+							<span class="deg"></span>
+							<a href="javascript:"><span class="temp-type">5</span></a>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+						<ul class="forecast">
+							<a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+							<li class="active">
+								<span class="date">Main Course</span>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+							</li>
+							<li>
+								<span class="date">Starter</span>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="col">
+    <div class="weather-card one">
+        <div class="top">
+            <div class="wrapper">
+                <div class="mynav">
+                    <a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+                    <a href="javascript:"><span class="lnr lnr-cog"></span></a>
+                </div>
+                <h1 class="heading"></h1>
+                <h3 class="location">Menu</h3>
+                <p class="temp">
+                    <span class="temp-value">Deal,</span>
+                    <span class="deg"></span>
+                    <a href="javascript:"><span class="temp-type">6</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="wrapper">
+                <ul class="forecast">
+                    <a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+                    <li class="active">
+                        <span class="date">Main Course</span>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+                    </li>
+                    <li>
+                        <span class="date">Starter</span>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="col">
+    <div class="weather-card rain">
+        <div class="top">
+            <div class="wrapper">
+                <div class="mynav">
+                    <a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+                    <a href="javascript:"><span class="lnr lnr-cog"></span></a>
+                </div>
+                <h1 class="heading"></h1>
+                <h3 class="location">Menu</h3>
+                <p class="temp">
+                    <span class="temp-value">Deal,</span>
+                    <span class="deg"></span>
+                    <a href="javascript:"><span class="temp-type">7</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="wrapper">
+                <ul class="forecast">
+                    <a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+                    <li class="active">
+                        <span class="date">Main Course</span>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+                    </li>
+                    <li>
+                        <span class="date">Starter</span>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="col">
+    <div class="weather-card one">
+        <div class="top">
+            <div class="wrapper">
+                <div class="mynav">
+                    <a href="javascript:"><span class="lnr lnr-chevron-left"></span></a>
+                    <a href="javascript:"><span class="lnr lnr-cog"></span></a>
+                </div>
+                <h1 class="heading"></h1>
+                <h3 class="location">Menu</h3>
+                <p class="temp">
+                    <span class="temp-value">Deal,</span>
+                    <span class="deg"></span>
+                    <a href="javascript:"><span class="temp-type">8</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="wrapper">
+                <ul class="forecast">
+                    <a href="javascript:"><span class="lnr lnr-chevron-up go-up"></span></a>
+                    <li class="active">
+                        <span class="date">Main Course</span>
+{#								<span class="lnr lnr-sun condition">#}
+{#									<span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+                    </li>
+                    <li>
+                        <span class="date">Starter</span>
+{#								<span class="lnr lnr-cloud condition">#}
+{#									<span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>#}
+{#								</span>#}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	</div>
+
+</div>
+
+{% endblock pageContent %}
+
+{% block ScriptBlock %}
+    <style>
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
+@import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #112233;
+}
+
+
+.weather-card {
+  margin: 30px auto;
+  height: 370px;
+  width: 225px;
+  background: #fff;
+  box-shadow: 0 1px 14px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.weather-card .top {
+  position: relative;
+  height: 285px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://img.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg?w=826&t=st=1677862612~exp=1677863212~hmac=04133759cc925b974a53995c0f417d8403297aeb9d11d097e099cd229099dffd") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top .wrapper {
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top .wrapper .mynav {
+  height: 10px;
+}
+.weather-card .top .wrapper .mynav .lnr {
+  color: #fff;
+  font-size: 10px;
+}
+.weather-card .top .wrapper .mynav .lnr-chevron-left {
+  float: left;
+}
+.weather-card .top .wrapper .mynav .lnr-cog {
+  display: inline-block;
+  float: right;
+}
+.weather-card .top .wrapper .heading {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 200;
+  color: #fff;
+}
+.weather-card .top .wrapper .location {
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 100;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp {
+  margin-top: 10px;
+}
+.weather-card .top .wrapper .temp a {
+  text-decoration: none;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp a .temp-type {
+  font-size: 42px;
+}
+.weather-card .top .wrapper .temp .temp-value {
+  display: inline-block;
+  font-size: 42px;
+  font-weight: 300;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp .deg {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 300;
+  color: #fff;
+  vertical-align: top;
+  margin-top: 5px;
+}
+.weather-card .top:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.weather-card .bottom {
+  padding: 0 15px;
+  background: #fff;
+}
+.weather-card .bottom .wrapper .forecast {
+  overflow: hidden;
+  margin: 0;
+  font-size: 0;
+  padding: 0;
+  padding-top: 10px;
+  max-height: 77px;
+}
+.weather-card .bottom .wrapper .forecast a {
+  text-decoration: none;
+  color: #000;
+}
+.weather-card .bottom .wrapper .forecast .go-up {
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.weather-card .bottom .wrapper .forecast li {
+  display: block;
+  font-size: 12px;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.25);
+  line-height: 1em;
+  margin-bottom: 15px;
+}
+.weather-card .bottom .wrapper .forecast li .date {
+  display: inline-block;
+}
+.weather-card .bottom .wrapper .forecast li .condition {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  font-size: 12px;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 200;
+  padding-top: 1px;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp .deg {
+  display: inline-block;
+  font-size: 3px;
+  font-weight: 150;
+  margin-left: 1px;
+  vertical-align: top;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
+  font-size: 10px;
+}
+.weather-card .bottom .wrapper .forecast li.active {
+  color: rgba(0, 0, 0, 0.8);
+}
+.weather-card.rain .top {
+  background: url("https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?w=826&t=st=1677862567~exp=1677863167~hmac=435dd09e96933f45fc87588915144233dac00ab60d98fc82443cb04c8a1f0b11") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+/* The modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  border: none;
+  width: 80%; /* Set the width of the modal to 80% of the window */
+  height: 80%; /* Set the height of the modal to 80% of the window */
+  max-width: 700px;
+  max-height: 700px;
+  background-color: #fefefe;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Zoom Animation */
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+    </style>
+
+    <script>
+
+    function showImage(src) {
+  var modal = document.createElement("div");
+  modal.className = "modal";
+  modal.onclick = function() {
+    modal.style.display = "none";
+    document.body.removeChild(modal);
+  };
+
+  var modalContent = document.createElement("div");
+  modalContent.className = "modal-content";
+  modal.appendChild(modalContent);
+
+  var closeBtn = document.createElement("span");
+  closeBtn.className = "close";
+  closeBtn.innerHTML = "&times;";
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+    document.body.removeChild(modal);
+  };
+  modalContent.appendChild(closeBtn);
+
+  var img = document.createElement("img");
+  img.src = src;
+  img.style.maxHeight = "100%";
+  img.style.maxWidth = "100%";
+  img.style.position = "absolute";
+  img.style.top = "50%";
+  img.style.left = "50%";
+  img.style.transform = "translate(-50%, -50%) scale(0)";
+  modalContent.appendChild(img);
+
+  document.body.appendChild(modal);
+
+  setTimeout(function() {
+    modal.style.display = "block";
+    img.style.transform = "translate(-50%, -50%) scale(1)";
+  }, 10);
+}
+
+    </script>
+{% endblock ScriptBlock %}
